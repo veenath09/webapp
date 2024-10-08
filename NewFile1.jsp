@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Request Details</title>
+    <link rel="stylesheet" href="loanRequest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <%@ include file = "Header.html" %>
+
+    <style>
+        /* General body styling */
+        
+
+body {
+    font-family:'Times New Roman', Times, serif ;
+    background: linear-gradient(135deg, #31c1ce 40%, #e0e0e0);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+
+main {
+    padding: 20px;
+    margin-top: 80px; /* Adjust this to match or exceed header height */
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 60px); /* Full height minus header height */
+    overflow-y: auto; /* Vertical scrolling */
+}
+
+
+/* Loan details container */
+.loan-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #39dca3;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.loan-details-container:hover {
+    transform: scale(1.01);
+}
+
+/* Personal and loan information sections */
+.personal-section, .loan-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #27b6ad;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section headers */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: #4c5eaa;
+}
+
+/* Info block styling */
+.info-block {
+    background-color: #54bdb7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 10px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Buttons section */
+.actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.actions .btn {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.actions .btn i {
+    margin-right: 8px;
+}
+
+.actions .approve {
+    background-color: #28a745;
+}
+
+.actions .approve:hover {
+    background-color: #218838;
+}
+
+.actions .ignore {
+    background-color: #dc3545;
+}
+
+.actions .ignore:hover {
+    background-color: #c82333;
+}
+
+/* Hover effects */
+.loan-details-container:hover .personal-section, 
+.loan-details-container:hover .loan-section {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+
+
+
+<main>
+    <h1>Loan Request Overview</h1>
+    <div class="loan-details-container">
+        <!-- Left side: Personal Information -->
+        <div class="personal-section">
+            <h2><i class="fas fa-user"></i> Personal Details</h2>
+            <div class="info-block">
+                <p><span class="label">Name:</span> John Doe</p>
+                <p><span class="label">ID No:</span> 123456789V</p>
+                <p><span class="label">Account No:</span> 987654321</p>
+                <p><span class="label">Address:</span> 123 Main St, Springfield</p>
+                <p><span class="label">Occupation:</span> Software Engineer</p>
+                <p><span class="label">Monthly Income:</span> $5,000</p>
+            </div>
+        </div>
+
+        <!-- Right side: Loan Information -->
+        <div class="loan-section">
+            <h2><i class="fas fa-hand-holding-usd"></i> Loan Information</h2>
+            <div class="info-block">
+                <p><span class="label">Loan Amount:</span> $15,000</p>
+                <p><span class="label">Interest Rate:</span> 5%</p>
+                <p><span class="label">Loan Duration:</span> 5 years</p>
+                <p><span class="label">Monthly Payment:</span> $283</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="actions">
+        <button class="btn approve"><i class="fas fa-check-circle"></i> Approve</button>
+        <button class="btn ignore"><i class="fas fa-times-circle"></i> Ignore</button>
+    </div>
+</main>
+
+</body>
+</html>

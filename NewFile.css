@@ -1,0 +1,167 @@
+
+
+body {
+	
+	
+    height: 100%; /* Make the body and html take the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Background color for the body */
+}
+
+
+
+.logo {
+    font-size: 24px; /* Logo font size */
+}
+
+nav a {
+    color: white; /* Navigation link color */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 20px; /* Space between links */
+}
+
+main {
+    padding: 20px;
+    margin-top: 80px; /* Adjust this to match or exceed header height */
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 60px); /* Full height minus header height */
+    overflow-y: auto; /* Vertical scrolling */
+}
+
+/* Section styling */
+section {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Side navigation styling */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #718bcd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Navigation links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #150e0e;
+}
+
+/* Profile dropdown styling */
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background-color: #718bcd;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-btn img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #718bcd;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #d9dbde;
+}
+
+.profile-container:hover .dropdown-content {
+    display: block;
+}
+
+.user-request{
+	width:100%;
+}
+
+.generate-reports{
+	width:90%
+	
+}
+
+footer{
+	display:flex;
+	justify-content:center;
+	background-color: #718bcd;
+	align-items:center;
+	text-align: center;
+	height:10%
+}
+
+.view-all {
+    display: block; /* Ensure it behaves like a block-level element */
+    margin: 20px auto; /* Center the button with auto margins */
+    padding: 10px 20px; /* Adjust the padding for better button size */
+    background-color: #718bcd; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    text-align: center; /* Align text in the center */
+}
+
+/* Optional: Add a hover effect */
+.view-all:hover {
+    background-color: #5a6da1; /* Darker shade on hover */
+}

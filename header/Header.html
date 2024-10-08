@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sidenav Example</title>
+<style>
+  body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+  }
+  
+  header {
+    z-index: 999;
+    display: flex;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding:18px;
+    background-color: #718bcd; 
+}
+
+.logo-container {
+  width: fit-content; 
+  overflow: hidden; 
+  justify-content: space-between;
+}
+
+.logo-container img {
+  width: 100%; 
+  height: 5rem;
+}
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #718bcd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #150e0e;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+
+  /* Profile dropdown styling */
+  .profile-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .profile-btn {
+    background-color: #718bcd;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-btn img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #5671a3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #d9dbde;
+  }
+
+  .profile-container:hover .dropdown-content {
+    display: block;
+  }
+
+  .profile-container:hover .profile-btn {
+    background-color: #5671a3;
+  }
+
+</style>
+</head>
+<body>
+<header>
+
+<!-- Button to open the sidenav -->
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<!-- The actual sidenav -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="logo-container">
+	<img src="Zenbank1.png">
+</div>
+
+<!-- User profile with avatar and dropdown -->
+<div class="profile-container">
+  <button class="profile-btn">
+    <img src="avatar.png" alt="Avatar"> <!-- Avatar image -->
+    User Profile ▼
+  </button>
+  <div class="dropdown-content">
+    <a href="#">Profile</a>
+    <a href="#">Logout</a>
+  </div>
+</div>
+
+</header>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
